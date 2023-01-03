@@ -9,11 +9,6 @@ const client = new Discord.Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAG
 
 // const { trigger_words } = require(`./trigger-words.json`);
 
-client.on('ready', () => {
-    console.log(`Logged in as ${client.user.tag}!`);
-    msg.send("Bonjour !");
-});
-
 client.on('message', message => {
     if (message.content === '!tavernier salut') {
         // Get the user's nickname
