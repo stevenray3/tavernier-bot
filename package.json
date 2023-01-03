@@ -1,0 +1,16 @@
+{
+    "name": "tavernier",
+    "version": "1.0.0",
+    "description": "Le bot qui sert un canon",
+    "main": "bot.js",
+    "scripts": {
+        "start": "node bot.js"
+      }, 
+    "author": "Steven Rollet",
+    "dependencies": {
+        "discord.io": "^2.5.3",
+        "discord.js": "^13.8.0",
+        "dotenv": "^16.0.1",
+        "winston": "^3.7.2"
+    }
+}
