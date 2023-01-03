@@ -8,9 +8,10 @@ const { Client, Intents } = require('discord.js');
 const client = new Discord.Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 
 // const { trigger_words } = require(`./trigger-words.json`);
-
-client.on('message', message => {
-    if (message.content === '!tavernier salut') {
+let trigger = '!tavernier salut';
+    
+client.on('message', msg => {
+    if ( msg.content.toLowerCase().includes(trigger) ) {
         // Get the user's nickname
         let nickname = message.member.nickname;
         if (nickname === null) {
@@ -18,7 +19,7 @@ client.on('message', message => {
             nickname = message.author.username;
         }
         // Send the greeting message with the user's nickname
-        message.channel.send(`Salut, ${nickname}! Bienvenue à la Taverne!`);
+        msg.reply(`Salut, ${nickname}! Bienvenue à la Taverne!`);
     }
 });
 
